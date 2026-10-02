@@ -1,0 +1,16 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Local environment files (credentials live here; never commit them)
+.env
+.env.*
+!.env.example
+
+# Logs and OS/editor noise
+*.log
+npm-debug.log*
+.DS_Store
+.vscode/
+.idea/

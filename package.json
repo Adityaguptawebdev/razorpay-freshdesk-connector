@@ -1,0 +1,37 @@
+{
+  "name": "freshdesk-mcp-connector",
+  "version": "1.0.0",
+  "description": "Read-only Freshdesk connector that exposes ticket list/get/search as MCP tools for AI agents.",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "spec": "tsx scripts/generate-tool-spec.ts",
+    "demo": "tsx --env-file=.env scripts/demo-client.ts"
+  },
+  "keywords": [
+    "freshdesk",
+    "mcp",
+    "model-context-protocol",
+    "connector",
+    "agent"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vitest": "^4.1.11"
+  }
+}
